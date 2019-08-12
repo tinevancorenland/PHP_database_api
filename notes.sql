@@ -1,7 +1,11 @@
-CREATE DATABASE IF NOT EXISTS db_notes;
+CREATE DATABASE db_notes;
 
-CREATE TABLE IF NOT EXISTS notes (
-  note_id       int             PRIMARY KEY IDENTITY,
-  title         varchar (255)   UNIQUE NOT NULL,
-  content       text (1000),
-  );
+CREATE TABLE `db_notes`.`notes` ( 
+  `note_id` INT NOT NULL AUTO_INCREMENT , 
+  `title` VARCHAR(255) NOT NULL , 
+  `content` TEXT NULL DEFAULT NULL , 
+  PRIMARY KEY (`note_id`), 
+  UNIQUE `title` (`title`)
+  ) 
+  
+  ENGINE = InnoDB;
