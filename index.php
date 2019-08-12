@@ -1,3 +1,6 @@
+<!-- Info
+https://nl.wikibooks.org/wiki/Programmeren_in_PHP/MySQL_in_PHP -->
+
 <?php
 
 $servername = "localhost";
@@ -28,7 +31,7 @@ $overview = "SELECT note_id, title, content FROM notes";
 $overviewresult = $conn->query($overview);
 
 if($overviewresult->num_rows > 0) {
-    echo "<table><tr><th>Title</th><th>Content</th></tr>";
+    echo "<table><tr><th>ID</th><th>Title</th><th>Content</th></tr>";
     while($row = $overviewresult->fetch_assoc()) {
         echo "<tr><td>".$row["note_id"]."</td><td>".$row["title"]."</td><td>".$row["content"]."</td></tr>";
     } 
@@ -39,13 +42,13 @@ if($overviewresult->num_rows > 0) {
 
 // Delete note
 
-$delete = "DELETE FROM notes WHERE note_id=2";
-$deleteresult = $conn->query($delete);
+// $delete = "DELETE FROM notes WHERE note_id=2";
+// $deleteresult = $conn->query($delete);
 
-// // Update note
+// // // Update note
 
-$update = "UPDATE notes SET title='fouralour' where note_id=6";
-$resultupdate = $conn->query($update);
+// $update = "UPDATE notes SET title='fouralour' where note_id=6";
+// $resultupdate = $conn->query($update);
 
 
 ?>
