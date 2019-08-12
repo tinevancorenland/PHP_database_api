@@ -2,33 +2,50 @@
 
 $servername = "localhost";
 $username = "admin";
-$password = "eWTaf85EmyiY";
+$password = "1DtWuUOIz6jO";
 $database = "db_notes";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $database) or die(mysqli_error($conn));
+
+// Insert a new note into the database
 
 $title = filter_var($_GET["title"], FILTER_SANITIZE_STRING);
 $content = filter_var($POST["content"], FILTER_SANITIZE_STRING);
 
-echo $title, $content;
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-
-// insert a new note into the database
-$sql = "INSERT INTO notes (title, content)
+$insert = "INSERT INTO notes (title, content)
 VALUES ('$title', '$content')";
 
 if($title) {
-    if ($conn->query($sql)) {
-        echo "new record created";
-    } else {
-        echo "Error: " .$sql . "<br>" .$conn->error;
+    if (!$conn->query($insert)) {
+        echo "Error: " .$insert . "<br>" .$conn->error;
     }
 }
+
+// List notes in an html table overview
+
+$overview = "SELECT note_id, title, content FROM notes";
+$overviewresult = $conn->query($overview);
+
+if($overviewresult->num_rows > 0) {
+    echo "<table><tr><th>Title</th><th>Content</th></tr>";
+    while($row = $overviewresult->fetch_assoc()) {
+        echo "<tr><td>".$row["note_id"]."</td><td>".$row["title"]."</td><td>".$row["content"]."</td></tr>";
+    } 
+    echo "</table>";
+} else {
+    echo "no results";
+}
+
+// Delete note
+
+$delete = "DELETE FROM notes WHERE note_id=2";
+$deleteresult = $conn->query($delete);
+
+// // Update note
+
+$update = "UPDATE notes SET title='fouralour' where note_id=6";
+$resultupdate = $conn->query($update);
+
 
 ?>
