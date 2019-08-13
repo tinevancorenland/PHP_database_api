@@ -1,6 +1,6 @@
 <?php
 
-include_once "connection.php"; 
+require "connection.php"; 
 
 $overview = "SELECT note_id, title, content FROM notes";
 $overviewresult = $conn->query($overview);

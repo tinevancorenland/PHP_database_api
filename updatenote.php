@@ -1,9 +1,9 @@
 <?php
 
-include_once "connection.php";
+require "connection.php";
 
 $resultupdate = $conn->query($update);
-$update = "UPDATE notes SET title='twosies' where note_id=2";
+$update = "UPDATE notes SET content='$content' where title='$title'";
 
 mysqli_close($conn);
 

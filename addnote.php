@@ -1,6 +1,6 @@
 <?php
 
-include_once "connection.php";
+require "connection.php";
 
 $insert = "INSERT INTO notes (title, content)
 VALUES ('$title', '$content')";
