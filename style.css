@@ -1,0 +1,92 @@
+body {
+  background-color: #eceff0;
+}
+
+body, input {
+  font: 1em "Open Sans", sans-serif;
+  color: #363639;
+}
+
+h2 {
+  font-family: "Shadows Into Light", cursive;
+  margin-bottom: 0;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dashed #363639;
+}
+
+.notes {
+  background-color: #fff;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.notes .header {
+  font-family: "Shadows Into Light", cursive;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.notes .items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.notes .items li {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
+}
+
+.notes .items li p {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0;
+}
+
+.notes form {
+  border: 1px dashed #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.notes form .title-add {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 24px;
+  border: none;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.notes form .content-add {
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 0 0 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.submit {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  -webkit-box-shadow: 3px 3px 0 #ddd;
+          box-shadow: 3px 3px 0 #ddd;
+}
+/*# sourceMappingURL=style.css.map */

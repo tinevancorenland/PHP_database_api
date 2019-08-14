@@ -1,0 +1,82 @@
+$fontbody: 'Open Sans', sans-serif;
+$fonttitle: 'Shadows Into Light', cursive;
+
+body {
+    background-color: #eceff0;
+}
+
+body, input {
+    font: 1em $fontbody;
+    color: #363639;
+}
+
+h2 {
+    font-family: $fonttitle;
+    margin-bottom: 0;
+    text-decoration-line: underline;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px dashed #363639;
+}
+
+.notes {
+    background-color: #fff;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
+    .header {
+        font-family: $fonttitle;
+        letter-spacing: 1px;
+        margin: 0 0 10px 0;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .items {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            border: 0;
+            border-bottom: 1px dashed #ccc;
+            padding: 5px 0;
+            p {
+                font-family: $fontbody;
+                margin-top: 0;
+            }
+        }
+    }
+    form {
+        border: 1px dashed #ccc;;
+        padding: 10px;         
+        margin-top: 10px;
+        .title-add {
+            font-family: $fonttitle;
+            font-size: 24px;
+            border: none;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .content-add {
+            display: block;
+            border: none;
+            width: 100%;
+            padding: 0 0 50px 0;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.submit {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-shadow: 3px 3px 0 #ddd;
+}
