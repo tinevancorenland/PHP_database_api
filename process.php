@@ -12,11 +12,15 @@ if (isset($_POST["save"])) {
     $content = $_POST["content"];
 
     $conn->query("INSERT INTO notes (title, content) VALUES ('$title', '$content')") or die($conn->error);
+
+    header("location: index.php");
 }
 
 if (isset($_GET["delete"])) {
     $id = $_GET["delete"];
     $conn->query("DELETE FROM notes WHERE note_id=$id") or die ($conn->error);
+
+    header("location: index.php");
 }
 
 ?>
