@@ -7,16 +7,61 @@ body, input {
   color: #363639;
 }
 
-h2 {
+.header {
   font-family: "Shadows Into Light", cursive;
-  margin-bottom: 0;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#notetable {
+  width: 100%;
+  border: 1px #363639;
+}
+
+#notetable #headtitle {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 24px;
+  text-align: left;
+}
+
+#notetable #headcontent {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+
+td.title {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20px;
+}
+
+td.content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
 }
 
 a {
   text-decoration: none;
   border-bottom: 1px dashed #363639;
+}
+
+.items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.items li {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
+}
+
+.content {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0;
 }
 
 .notes {
@@ -32,38 +77,13 @@ a {
           box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
-.notes .header {
-  font-family: "Shadows Into Light", cursive;
-  letter-spacing: 1px;
-  margin: 0 0 10px 0;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.notes .items {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.notes .items li {
-  border: 0;
-  border-bottom: 1px dashed #ccc;
-  padding: 5px 0;
-}
-
-.notes .items li p {
-  font-family: "Open Sans", sans-serif;
-  margin-top: 0;
-}
-
-.notes form {
+form {
   border: 1px dashed #ccc;
   padding: 10px;
   margin-top: 10px;
 }
 
-.notes form .title-add {
+form .title-add {
   font-family: "Shadows Into Light", cursive;
   font-size: 24px;
   border: none;
@@ -71,7 +91,7 @@ a {
   margin-bottom: 5px;
 }
 
-.notes form .content-add {
+form .content-add {
   display: block;
   border: none;
   width: 100%;

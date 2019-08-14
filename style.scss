@@ -10,15 +10,58 @@ body, input {
     color: #363639;
 }
 
-h2 {
+.header {
     font-family: $fonttitle;
-    margin-bottom: 0;
-    text-decoration-line: underline;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#notetable {
+    width: 100%;
+    border: 1px #363639;
+    #headtitle {
+        font-family: $fonttitle;
+        font-size: 24px;
+        text-align: left;
+    }
+    #headcontent {
+        font-family: $fontbody;
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+td.title {
+    font-family: $fonttitle;
+    font-size: 20px;
+}
+
+td.content {
+    font-family: $fontbody;
+    font-size: 20px;
 }
 
 a {
     text-decoration: none;
     border-bottom: 1px dashed #363639;
+}
+
+.items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        padding: 5px 0;
+    }
+}
+
+.content {
+    font-family: $fontbody;
+    margin-top: 0;
 }
 
 .notes {
@@ -30,45 +73,26 @@ a {
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
-    .header {
+}
+
+
+form {
+    border: 1px dashed #ccc;;
+   padding: 10px;         
+    margin-top: 10px;
+    .title-add {
         font-family: $fonttitle;
-        letter-spacing: 1px;
-        margin: 0 0 10px 0;
-        text-align: center;
-        text-decoration: underline;
+        font-size: 24px;
+        border: none;
+        width: 100%;
+        margin-bottom: 5px;
     }
-    .items {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        li {
-            border: 0;
-            border-bottom: 1px dashed #ccc;
-            padding: 5px 0;
-            p {
-                font-family: $fontbody;
-                margin-top: 0;
-            }
-        }
-    }
-    form {
-        border: 1px dashed #ccc;;
-        padding: 10px;         
-        margin-top: 10px;
-        .title-add {
-            font-family: $fonttitle;
-            font-size: 24px;
-            border: none;
-            width: 100%;
-            margin-bottom: 5px;
-        }
-        .content-add {
-            display: block;
-            border: none;
-            width: 100%;
-            padding: 0 0 50px 0;
-            box-sizing: border-box;
-        }
+    .content-add {
+        display: block;
+       border: none;
+        width: 100%;
+        padding: 0 0 50px 0;
+        box-sizing: border-box;
     }
 }
 
