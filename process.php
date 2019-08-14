@@ -8,8 +8,8 @@ $database = "db_notes";
 $conn = mysqli_connect($servername, $username, $password, $database) or die(mysqli_error($conn));
 
 if (isset($_POST["save"])) {
-    $title = $_POST["title"];
-    $content = $_POST["content"];
+    $title = filter_var($_POST["title"], FILTER_SANITIZE_STRING);
+    $content = filter_var($_POST["content"], FILTER_SANITIZE_STRING);
 
     $conn->query("INSERT INTO notes (title, content) VALUES ('$title', '$content')") or die($conn->error);
 
