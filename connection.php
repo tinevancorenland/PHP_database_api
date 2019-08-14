@@ -1,6 +1,3 @@
-<!-- Info
-https://nl.wikibooks.org/wiki/Programmeren_in_PHP/MySQL_in_PHP -->
-
 <?php
 
 $servername = "localhost";
