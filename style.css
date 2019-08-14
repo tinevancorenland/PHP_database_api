@@ -3,21 +3,33 @@ body {
 }
 
 body, input {
-  font: 1em "Open Sans", sans-serif;
+  font: "Open Sans", sans-serif;
   color: #363639;
 }
 
 .header {
   font-family: "Shadows Into Light", cursive;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: 0 0 10px 0;
   text-align: center;
   text-decoration: underline;
 }
 
+.notes {
+  background-color: #fff;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
 #notetable {
   width: 100%;
-  border: 1px #363639;
 }
 
 #notetable #headtitle {
@@ -26,25 +38,25 @@ body, input {
   text-align: left;
 }
 
-#notetable #headcontent {
+#notetable #headcontent, #notetable #headaction {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
 }
 
 td.title {
   font-family: "Shadows Into Light", cursive;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 td.content {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 a {
   text-decoration: none;
-  border-bottom: 1px dashed #363639;
+  color: #363639;
 }
 
 .items {
@@ -62,19 +74,6 @@ a {
 .content {
   font-family: "Open Sans", sans-serif;
   margin-top: 0;
-}
-
-.notes {
-  background-color: #fff;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -101,11 +100,31 @@ form .content-add {
 }
 
 .submit {
-  background-color: #fff;
+  background-color: #bdecb6;
   margin-top: 10px;
   padding: 5px 10px;
   border: 1px solid #ddd;
-  width: 100%;
+  width: 30%;
+  -webkit-box-shadow: 3px 3px 0 #ddd;
+          box-shadow: 3px 3px 0 #ddd;
+}
+
+button.edit {
+  background-color: #ffb347;
+  font-family: "Shadows Into Light", cursive;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 3px 3px 0 #ddd;
+          box-shadow: 3px 3px 0 #ddd;
+}
+
+button.delete {
+  background-color: #ff6961;
+  font-family: "Shadows Into Light", cursive;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
   -webkit-box-shadow: 3px 3px 0 #ddd;
           box-shadow: 3px 3px 0 #ddd;
 }

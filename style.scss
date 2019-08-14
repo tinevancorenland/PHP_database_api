@@ -6,46 +6,56 @@ body {
 }
 
 body, input {
-    font: 1em $fontbody;
+    font: $fontbody;
     color: #363639;
 }
 
 .header {
     font-family: $fonttitle;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin: 0 0 10px 0;
     text-align: center;
     text-decoration: underline;
 }
 
+.notes {
+    background-color: #fff;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
+}
+
 #notetable {
     width: 100%;
-    border: 1px #363639;
     #headtitle {
         font-family: $fonttitle;
         font-size: 24px;
         text-align: left;
     }
-    #headcontent {
+    #headcontent, #headaction {
         font-family: $fontbody;
-        font-size: 20px;
+        font-size: 18px;
         text-align: left;
     }
 }
 
 td.title {
     font-family: $fonttitle;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 td.content {
     font-family: $fontbody;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 a {
     text-decoration: none;
-    border-bottom: 1px dashed #363639;
+    color: #363639;
 }
 
 .items {
@@ -64,18 +74,6 @@ a {
     margin-top: 0;
 }
 
-.notes {
-    background-color: #fff;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
-}
-
-
 form {
     border: 1px dashed #ccc;;
    padding: 10px;         
@@ -89,7 +87,7 @@ form {
     }
     .content-add {
         display: block;
-       border: none;
+        border: none;
         width: 100%;
         padding: 0 0 50px 0;
         box-sizing: border-box;
@@ -97,10 +95,28 @@ form {
 }
 
 .submit {
-    background-color: #fff;
+    background-color: #bdecb6;
     margin-top: 10px;
     padding: 5px 10px;
     border: 1px solid #ddd;
-    width: 100%;
+    width: 30%;
+    box-shadow: 3px 3px 0 #ddd;
+}
+
+button.edit {
+    background-color: #ffb347;
+    font-family: $fonttitle;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 0 #ddd;
+}
+
+button.delete {
+    background-color: #ff6961;
+    font-family: $fonttitle;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
     box-shadow: 3px 3px 0 #ddd;
 }

@@ -37,27 +37,20 @@
                 <tr>
                     <td class="title"><?php echo $row["title"]; ?></td>
                     <td class="content"><?php echo $row["content"]; ?></td>
-                    <td></td>
+                    <td>
+                        <button class="edit"><a href="index.php?edit=<?php echo $row["note_id"]; ?>">Edit</a></button>
+                        <button class="delete"><a href="index.php?delete=<?php echo $row["note_id"]; ?>">Delete</a></button>
+                    </td>
                 </tr>
                 <?php endwhile; ?>
 
         </table>
-        <!-- <ul class="items">
-            <li class="item">
-                <h2 class="title">title one</h2>
-                <p class="content">content one</p>
-            </li>
-            <li class="item">
-                <h2 class="title">title two</h2>
-                <p class="content">content two</p>
-            </li>
-        </ul> -->
+
         <form class="item-add" action="process.php" method="post">
             <input class="title-add" type="text" name="title" placeholder="title" autocomplete="off" required>
             <input class="content-add" type="text" name="content"  size="1000" placeholder="content" ></textarea>
             <input class="submit" type="submit" name="save" value="add new note" >
         </form>
-
 
     </div>
 </body>

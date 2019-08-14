@@ -14,4 +14,9 @@ if (isset($_POST["save"])) {
     $conn->query("INSERT INTO notes (title, content) VALUES ('$title', '$content')") or die($conn->error);
 }
 
+if (isset($_GET["delete"])) {
+    $id = $_GET["delete"];
+    $conn->query("DELETE FROM notes WHERE note_id=$id") or die ($conn->error);
+}
+
 ?>
