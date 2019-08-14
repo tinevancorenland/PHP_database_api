@@ -38,7 +38,7 @@
                     <td class="title"><?php echo $row["title"]; ?></td>
                     <td class="content"><?php echo $row["content"]; ?></td>
                     <td>
-                        <button class="edit"><a href="index.php?edit=<?php echo $row["note_id"]; ?>">Edit</a></button>
+                        <!-- <button class="edit"><a href="index.php?edit=<?php echo $row["note_id"]; ?>">Edit</a></button> -->
                         <button class="delete"><a href="index.php?delete=<?php echo $row["note_id"]; ?>">Delete</a></button>
                     </td>
                 </tr>
@@ -47,9 +47,9 @@
         </table>
 
         <form class="item-add" action="process.php" method="post">
-            <input class="title-add" type="text" name="title" placeholder="title" autocomplete="off" required>
-            <input class="content-add" type="text" name="content"  size="1000" placeholder="content" ></textarea>
-            <input class="submit" type="submit" name="save" value="add new note" >
+            <input class="title-add" type="text" name="title" placeholder="title" value="<?php echo $title; ?>" required>
+            <input class="content-add" type="text" name="content"  size="1000" placeholder="content" value="<?php echo $content; ?>">
+            <input class="submit" type="submit" name="save" value="save" >
         </form>
 
     </div>
